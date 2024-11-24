@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*Colors*/
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Very-dark-cyan: hsl(157, 28%, 21%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  height: 500px;
+  width: 700px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.desk-img {
+  flex: 1 1 50%;
+}
+
+.desk-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main {
+  background-color: var(--White);
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 35px;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.price {
+  font-size: 2rem;
+  display: flex;
+  align-self: flex-start;
+  gap: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: var(--Dark-cyan);
+  align-items: center;
+}
+
+.price span {
+  font-size: .9rem;
+  color: var(--Dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.main .perfume {
+  align-self: flex-start;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 5px;
+}
+
+.main h1 {
+  font-family: "Fraunces", serif;
+  line-height: 1;
+  font-size: 2.5rem
+}
+
+.main button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--Dark-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.main button:hover {
+  background-color: var(--Very-dark-cyan);
+}
+
+.main button img {
+  height: 20px;
+}
+
+@media (width < 700px) {
+  .card-container {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+  }
+
+  
+
+  .main {
+    padding: 40px;
+    gap: 20px;
+  }
+}
